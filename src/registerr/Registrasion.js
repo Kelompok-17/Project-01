@@ -41,8 +41,8 @@ function RegistrationForm() {
           </Form>
         </Col>
         <Col md={6} className="rocket-section">
-          <div className="rocket-image">
-            {/* Gambar Roket */}
+          <div className="Bahasa inggris ">
+            {/* Gambar Bahasa Inggris */}
           </div>
         </Col>
       </Row>
