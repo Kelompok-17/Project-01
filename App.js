@@ -1,13 +1,23 @@
 import React from 'react';
-import AppRoutes from './Routes';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar'; 
+import Homepage from './pages/Homepage'; 
+import RegisterForm from './pages/RegistrationForm'; 
+import LoginForm from './pages/LoginForm';
 
-function App() {
+const App = () => {
   return (
-    <div className="app-container">
-      <AppRoutes />
-    </div>
+    <Router>
+      <Navbar />
+      <div style={{ padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
-
